@@ -12,7 +12,7 @@ public class GuessingGmae {
         int guessNumber;
 
         Random random = new Random();
-        int randomNum = random.nextInt(100);
+        int randomNum = random.nextInt(10) + 1;
 
         boolean correct = false;
 
@@ -25,7 +25,7 @@ public class GuessingGmae {
 
         while (!correct) {
 
-            System.out.println("TRY AGAIN!: ");
+            System.out.println("Try Again!");
             guessNumber = input.nextInt();
 
             if (guessNumber == randomNum) {
@@ -33,9 +33,9 @@ public class GuessingGmae {
                 System.out.println("You are correct!");
                 System.out.println("The random number is " + randomNum + "!");
             } else if (guessNumber < randomNum) {
-                System.out.println("HIGHER");
+                System.out.println("Try a higher number!");
             } else if (guessNumber > randomNum) {
-                System.out.println("LOWER");
+                System.out.println("Try a lower number!");
                 {
                 }
             }
